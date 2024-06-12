@@ -14,7 +14,7 @@ struct TaskListView: View {
     var body: some View {
         List(tasks) { task in
             HStack {
-                Image(systemName: task.isCompleted ? "circle.fill.circle" : "circle")
+                Image(systemName: task.isCompleted ? "circle.inset.filled" : "circle")
                 Text(task.title)
             }
         }
