@@ -26,7 +26,16 @@ struct SidebarView: View {
                         Image(systemName: "folder")
                         TextField("New List", text: $list.title)
                     }
-                    
+                    .tag(TaskCategory.userLists(list))
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Delete List", role: .destructive) {
+                            if let index = userLists.firstIndex(where: {$0.id == list.id}) {
+                                userLists.remove(at: index)
+                            }
+                        }
+                        /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
+                        /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
+                    }))
                 }
             }
         }
@@ -43,6 +52,7 @@ struct SidebarView: View {
                 .fontWeight(.medium)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             }
+            .keyboardShortcut(KeyEquivalent("n"), modifiers: [.shift, .command])
             .buttonStyle(.borderless)
             .foregroundStyle(.blue)
             .padding(.leading, 12)
