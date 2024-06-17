@@ -9,9 +9,9 @@ import SwiftUI
 
 struct TaskListView: View {
     let title: String
-    @Binding var tasks: [Task]
+    @Binding var tasks: [TaskOG]
     
-    @State private var selectedTask: Task? = nil
+    @State private var selectedTask: TaskOG? = nil
     @State private var showingInspector = false
     
     var body: some View {
@@ -50,11 +50,11 @@ struct TaskListView: View {
     }
     
     func addTask() {
-        let newTask = Task(title: "New task")
+        let newTask = TaskOG(title: "New task")
         tasks.append(newTask)
     }
 }
 
 #Preview {
-    TaskListView(title: "All", tasks: .constant(Task.examples))
+    TaskListView(title: "All", tasks: .constant(TaskOG.examples))
 }

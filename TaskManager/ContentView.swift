@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var userLists: [TaskList] = TaskList.examples
     @State private var selection: TaskCategory? = nil
-    @State private var allTasks = Task.examples
+    @State private var allTasks = TaskOG.examples
     
     @State private var query = ""
     

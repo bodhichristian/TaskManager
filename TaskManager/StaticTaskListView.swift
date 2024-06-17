@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StaticTaskListView: View {
     let title: String
-    let tasks: [Task]
+    let tasks: [TaskOG]
     
     var body: some View {
         List(tasks) { task in
@@ -22,5 +22,5 @@ struct StaticTaskListView: View {
 }
 
 #Preview {
-    StaticTaskListView(title: "all", tasks: Task.examples)
+    StaticTaskListView(title: "all", tasks: TaskOG.examples)
 }

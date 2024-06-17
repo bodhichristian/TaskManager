@@ -11,11 +11,11 @@ struct TaskList: Identifiable, Hashable {
     let id = UUID()
     var title: String
     let creationDate: Date = Date()
-    var tasks: [Task] = []
+    var tasks: [TaskOG] = []
     
     static let example = TaskList(
         title: "Personal",
-        tasks: Task.examples
+        tasks: TaskOG.examples
     )
     
     static let examples = [

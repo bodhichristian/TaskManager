@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TaskView: View {
-    @Binding var task: Task
-    @Binding var selectedTask: Task?
+    @Binding var task: TaskOG
+    @Binding var selectedTask: TaskOG?
     @Binding var showingInspector: Bool
     
     var body: some View {
@@ -36,5 +36,5 @@ struct TaskView: View {
 }
 
 #Preview {
-    TaskView(task: .constant(Task.example), selectedTask: .constant(nil), showingInspector: .constant(false))
+    TaskView(task: .constant(TaskOG.example), selectedTask: .constant(nil), showingInspector: .constant(false))
 }
