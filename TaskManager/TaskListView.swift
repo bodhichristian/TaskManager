@@ -17,12 +17,17 @@ struct TaskListView: View {
         }
         .toolbar {
             Button {
-                
+                addTask()
             } label: {
                 Label("Add new task", systemImage: "plus")
             }
 
         }
+    }
+    
+    func addTask() {
+        let newTask = Task(title: "New task")
+        tasks.append(newTask)
     }
 }
 

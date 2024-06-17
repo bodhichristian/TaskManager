@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SidebarView: View {
     @Binding var userLists: [TaskList]
-    @Binding var selection: TaskCategory
+    @Binding var selection: TaskCategory?
     
     var body: some View {
         List(selection: $selection) {
@@ -26,6 +26,7 @@ struct SidebarView: View {
                         Image(systemName: "folder")
                         TextField("New List", text: $list.title)
                     }
+                    
                 }
             }
         }

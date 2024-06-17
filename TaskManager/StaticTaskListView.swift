@@ -18,13 +18,6 @@ struct StaticTaskListView: View {
                 Text(task.title)
             }
         }
-        .toolbar {
-            Button {
-                
-            } label: {
-                Label("Add new task", image: "plus")
-            }
-        }
     }
 }
 
