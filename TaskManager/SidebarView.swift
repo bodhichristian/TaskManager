@@ -33,13 +33,18 @@ struct SidebarView: View {
             Button {
                 addList()
             } label: {
-                Label("Add List", systemImage: "plus.circle")
-                    .font(.subheadline)
+                HStack(spacing: 4) {
+                    Image(systemName: "plus.circle")
+                        
+                    Text("New List")
+                }
+                .font(.headline)
+                .fontWeight(.medium)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             }
             .buttonStyle(.borderless)
             .foregroundStyle(.blue)
-            .padding(.leading, 16)
+            .padding(.leading, 12)
             .padding(.bottom, 8)
         }
     }
