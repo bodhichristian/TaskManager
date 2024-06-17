@@ -2,19 +2,19 @@
 //  TaskListView.swift
 //  TaskManager
 //
-//  Created by christian on 6/16/24.
+//  Created by christian on 6/6/24.
 //
 
 import SwiftUI
 
-struct TaskListView: View {
+struct StaticTaskListView: View {
     let title: String
-    @Binding var tasks: [Task]
+    let tasks: [Task]
     
     var body: some View {
         List(tasks) { task in
             HStack {
-                Image(systemName: task.isCompleted ? "largecircle.fill.circle" : "circle")
+                Image(systemName: task.isCompleted ? "circle.inset.filled" : "circle")
                 Text(task.title)
             }
         }
@@ -22,13 +22,12 @@ struct TaskListView: View {
             Button {
                 
             } label: {
-                Label("Add new task", systemImage: "plus")
+                Label("Add new task", image: "plus")
             }
-
         }
     }
 }
 
 #Preview {
-    TaskListView(title: "All", tasks: .constant(Task.examples))
+    StaticTaskListView(title: "all", tasks: Task.examples)
 }

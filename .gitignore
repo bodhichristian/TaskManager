@@ -5,8 +5,6 @@
 
 # CL ignores
 .DS_Store
-TaskManager/TaskManager/TaskManager.entitlements
-
 
 ## User settings
 xcuserdata/

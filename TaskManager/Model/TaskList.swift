@@ -9,7 +9,7 @@ import Foundation
 
 struct TaskList: Identifiable, Hashable {
     let id = UUID()
-    let title: String
+    var title: String
     let creationDate: Date = Date()
     var tasks: [Task] = []
     
